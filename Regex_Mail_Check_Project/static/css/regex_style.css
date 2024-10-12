@@ -1,0 +1,97 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+    text-align: center;
+}
+
+form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="submit"], button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"], button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #2980b9;
+}
+
+#results {
+    background: #e7f4e4;
+    border: 1px solid #2ecc71;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#matches {
+    list-style-type: none;
+    padding: 0;
+}
+
+#matches li {
+    background: #e7f4e4;
+    border: 1px solid #2ecc71;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 3px;
+}
+
+span {
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-top: 10px; /* Add spacing if needed */
+}
+
+.checkbox-container label {
+    margin-right: 8px; /* Space between label and checkbox */
+}
+
+.nav-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+    background-color: #2980b9;
+}

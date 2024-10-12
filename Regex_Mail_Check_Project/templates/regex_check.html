@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no">
+    <title>Regex Tester</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/regex_style.css') }}">
+</head>
+<body>
+    <h1>Regex Tester</h1>
+    
+    <form method="POST" id="myForm">
+        <label for="test_string">Test String:</label>
+        <input type="text" id="test_string" name="test_string" placeholder="e.g., Hello World!" required required>
+    
+            
+        <label for="regex_pattern">Regex Pattern:</label>
+        <input type="text" id="regex_pattern" name="regex_pattern" placeholder="e.g., \w+" required>
+    
+        
+        <div class="checkbox-container">
+            <label for="case_insensitive">Case Insensitive</label>
+            <input type="checkbox" id="case_insensitive" name="case_insensitive">
+        </div>
+        
+    
+            
+        <input type="submit" value="Test">
+        <button type="button" onclick="location.reload();">Refresh</button>
+    </form>
+
+    {% if highlighted_string and request.method == 'POST' %}
+        <h2>Input Data:</h2>
+        <p><strong>Test String:</strong> {{ request.form['test_string'] }}</p>
+        <p><strong>Regex Pattern:</strong> {{ request.form['regex_pattern'] }}</p>
+        <div id="results">{{ highlighted_string | safe }}</div>
+    {% endif %}
+
+    {% if request.method == 'POST' %}
+        {% if matches %}
+            <h3>Matches Found:</h3>
+            <ul id="matches">
+                {% if matches == "Invalid regex pattern." %}
+                    <li>{{ matches }}</li>
+                {% else %}
+                    {% for match in matches %}
+                        <li>Match: <b>" {{ match.group(0) }} " </b> at position <i>{{ match.start() + 1 }}</i></li>
+                    {% endfor %}
+                {% endif %}
+            </ul>
+        {% endif %}
+    {% endif %}
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    
+    <p>
+        <a href="{{ url_for('validate_email') }}" class="nav-link">Go to Email Validator</a>
+    </p>
+
+</body>
+</html>
