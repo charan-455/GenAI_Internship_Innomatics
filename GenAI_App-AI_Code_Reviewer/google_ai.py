@@ -1,7 +1,7 @@
 import google.generativeai as genai
 
 # Configure the API key
-f = open(r"C:\Users\charan\Documents\E_drive\Learnings\Innomatics\Google_Gemini\keys\api_key.txt")
+f = open("api_key.txt")
 key = f.read()
 
 genai.configure(api_key=key)
