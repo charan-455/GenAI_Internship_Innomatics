@@ -43,8 +43,8 @@ The task is to develop an AI-powered application using **Streamlit** that provid
 
 ## Usage
 ```pythno
-streamlit run app.py
-
+$ pip install requirements.txt
+$ streamlit run app.py
 ```
 
 ## Conclusion
