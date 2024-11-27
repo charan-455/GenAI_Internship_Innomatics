@@ -39,7 +39,7 @@ The task is to develop an AI-powered application using **Streamlit** that provid
 - **Langchain**: A framework for building AI applications that integrate language models and generative AI functionalities.
 - **Google Generative AI**: A set of AI models for generating text, speech, and other forms of data.
 
-## Domwload the model [**Yolo**](https://github.com/OlafenwaMoses/ImageAI/releases/download/3.0.0-pretrained/yolov3.pt)
+## Download the model [**Yolo**](https://github.com/OlafenwaMoses/ImageAI/releases/download/3.0.0-pretrained/yolov3.pt)
 
 ## Usage
 ```pythno
